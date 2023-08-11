@@ -1,17 +1,18 @@
 import { StyleSheet, View } from "react-native";
 import { Home } from "./src/screens";
+import { NavigationContainer } from "@react-navigation/native";
+import RootNavigation from "./src/navigation/RootNavigation";
 
 export default function App() {
   return (
-    <View style={styles.main}>
-      <Home />
-    </View>
+    <NavigationContainer>
+      <RootNavigation />
+    </NavigationContainer>
   );
 }
 
 const styles = StyleSheet.create({
   main: {
-    marginTop: 44,
     flex: 1,
   },
 });
